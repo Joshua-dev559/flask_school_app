@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Clubs{% endblock %}
+{% block content %}
+<h1 style="text-align:center;color:white;margin-bottom:30px;font-size:40px;text-shadow:2px 2px 5px rgba(0,0,0,0.3);">Clubs</h1>
+<table style="width:100%;border-collapse:collapse;background:white;border-radius:12px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.2);">
+    <thead style="background:#007BFF;color:white;">
+        <tr>
+            <th style="padding:18px;text-align:left;">ID</th>
+            <th style="padding:18px;text-align:left;">Club Name</th>
+            <th style="padding:18px;text-align:left;">Members</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for club in clubs %}
+    <tr style="border-bottom:1px solid #ddd;">
+        <td style="padding:16px;">{{ club.id }}</td>
+        <td style="padding:16px;">{{ club.name }}</td>
+        <td style="padding:16px;">{{ club.students | length }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

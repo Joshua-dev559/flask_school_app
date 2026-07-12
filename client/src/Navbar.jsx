@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <nav style={styles.nav}>
-      <span style={styles.brand}>🎓 School App</span>
+      <span style={styles.brand}>School App</span>
       <div>
         {token ? (
           <>
